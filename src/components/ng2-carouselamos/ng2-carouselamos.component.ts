@@ -35,6 +35,7 @@ export class Ng2Carouselamos {
   @Input() $next: TemplateRef<any>;
   @Input() $item: TemplateRef<any>;
   @Output() onSelectedItem: EventEmitter<SelectedItemInterface> = new EventEmitter();
+  widthUnit: string = 'px;
   childIndex: number = 0;
   amount: number = 0;
   startPress: number = 0;
