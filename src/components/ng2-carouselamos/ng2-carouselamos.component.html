@@ -1,7 +1,7 @@
 <div class="ng2-carouselamos-container">
   <div
     class="ng2-carouselamos-wrapper"
-    [style.width]="width + 'px'"
+    [style.width]="width"
     (mousedown)="onMousedown($event)"
     (touchstart)="onTouchdown($event)"
     (mousemove)="onMousemove($event, list.scrollWidth)"
@@ -44,7 +44,7 @@
       type="button"
       *ngIf="$next"
       (click)="scroll(true, list)"
-      [disabled]="amount <= -(list.scrollWidth-width)"
+      [disabled]="amount <= -(list.scrollWidth-widthAsNumber)"
     >
         <ng-template
           [ngTemplateOutlet]="$next"
